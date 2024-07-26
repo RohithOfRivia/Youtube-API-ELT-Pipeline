@@ -1,0 +1,29 @@
+[2024-07-24T01:50:16.162+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-24T01:50:16.179+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_script_dag.run_elt_script manual__2024-07-24T01:50:12.535573+00:00 [queued]>
+[2024-07-24T01:50:16.185+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_script_dag.run_elt_script manual__2024-07-24T01:50:12.535573+00:00 [queued]>
+[2024-07-24T01:50:16.186+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-24T01:50:16.196+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): run_elt_script> on 2024-07-24 01:50:12.535573+00:00
+[2024-07-24T01:50:16.204+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=73) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-24T01:50:16.205+0000] {standard_task_runner.py:64} INFO - Started process 75 to run task
+[2024-07-24T01:50:16.205+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_script_dag', 'run_elt_script', 'manual__2024-07-24T01:50:12.535573+00:00', '--job-id', '97', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpvyjz877e']
+[2024-07-24T01:50:16.206+0000] {standard_task_runner.py:91} INFO - Job 97: Subtask run_elt_script
+[2024-07-24T01:50:16.241+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_script_dag.run_elt_script manual__2024-07-24T01:50:12.535573+00:00 [running]> on host 95376c4fb2d6
+[2024-07-24T01:50:16.303+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_script_dag' AIRFLOW_CTX_TASK_ID='run_elt_script' AIRFLOW_CTX_EXECUTION_DATE='2024-07-24T01:50:12.535573+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-24T01:50:12.535573+00:00'
+[2024-07-24T01:50:16.306+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-24T01:50:16.307+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-07-24T01:50:16.307+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/elt_script.py']
+[2024-07-24T01:50:16.317+0000] {subprocess.py:86} INFO - Output:
+[2024-07-24T01:50:18.530+0000] {subprocess.py:93} INFO - ELT script started...
+[2024-07-24T01:50:18.531+0000] {subprocess.py:93} INFO - fetching videos...
+[2024-07-24T01:50:18.531+0000] {subprocess.py:93} INFO - fetching videos...
+[2024-07-24T01:50:18.532+0000] {subprocess.py:93} INFO - fetching videos...
+[2024-07-24T01:50:18.532+0000] {subprocess.py:93} INFO - fetching videos...
+[2024-07-24T01:50:18.533+0000] {subprocess.py:93} INFO - Videos uploaded to db...
+[2024-07-24T01:50:18.550+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-07-24T01:50:18.552+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-24T01:50:18.572+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=elt_script_dag, task_id=run_elt_script, run_id=manual__2024-07-24T01:50:12.535573+00:00, execution_date=20240724T015012, start_date=20240724T015016, end_date=20240724T015018
+[2024-07-24T01:50:18.596+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-07-24T01:50:18.614+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-07-24T01:50:18.616+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

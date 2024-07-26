@@ -1,0 +1,95 @@
+version: 2
+
+models:
+  - name: trending_video_counts_per_channel
+    description: "Displays which channel has the highest no. of videos appearing in the daily trending charts."
+    columns:
+      - name: channel_name
+        description: "rank"
+        data_tests:
+          - unique
+          - not_null
+      - name: video_count
+        description: "no. of trending videos"
+        data_tests:
+          - not_null
+          - unique
+      - name: rank
+        description: "rank"
+        data_tests:
+          - not_null
+  
+  - name: channel_rankings
+    description: "Displays which channel has the highest no. of videos occurences in the daily trending charts. Keeps track of overall occurences and does not track whether each video is unique or not, unlike trending_video_counts_per_channel"
+    columns:
+      - name: channel_name
+        description: "name of channel"
+        data_tests:
+          - unique
+          - not_null
+      - name: count
+        description: "no. of trending videos"
+        data_tests:
+          - not_null
+          - unique
+      - name: rank
+        description: "rank"
+        data_tests:
+          - not_null
+      - name: channel_id
+        description: "channel_id"
+        data_tests:
+          - not_null
+          - unique
+
+  - name: view_ranks
+    description: "Displays total views of every channel that has appeared in the trending charts, ranked by no. of views"
+    columns:
+      - name: channel_name
+        description: "channel name"
+        data_tests:
+          - unique
+          - not_null
+      - name: views
+        description: "total views of channel"
+        data_tests:
+          - not_null
+      - name: channel_start_date
+        description: "channel start date"
+        data_tests:
+          - not_null
+      - name: subs
+        description: "subscribers"
+        data_tests:
+          - not_null
+      - name: rank
+        description: "rank"
+        data_tests:
+          - not_null
+
+  - name: word_counts_title
+    description: "Displays counts of every word that appears in video titles. Basically to see what are the most common words used in titles."
+    columns:
+      - name: word
+        description: "word"
+        data_tests:
+          - unique
+          - not_null
+      - name: occurences
+        description: "no. of occurences for the respective word"
+        data_tests:
+          - not_null
+
+  - name: word_counts_title_distinct
+    description: "Same as word_counts_title but only selects distinct videos when calculating counts of each word."
+    columns:
+      - name: word
+        description: "word"
+        data_tests:
+          - unique
+          - not_null
+      - name: occurences
+        description: "no. of occurences for the respective word"
+        data_tests:
+          - not_null
+      

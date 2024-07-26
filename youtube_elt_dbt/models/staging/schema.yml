@@ -1,0 +1,26 @@
+
+version: 2
+
+models:
+  - name: source_videos
+    description: "testing"
+    columns:
+      - name: daily_rank
+        description: "rank"
+        data_tests:
+          - unique
+          - not_null
+      - name: title
+        description: "title"
+        data_tests:
+          - not_null
+
+#   - name: my_second_dbt_model
+#     description: "A starter dbt model"
+#     columns:
+#       - name: id
+#         description: "The primary key for this table"
+#         data_tests:
+#           - unique
+#           - not_null
+# RUN apt-get update && apt-get install -y postgresql-client

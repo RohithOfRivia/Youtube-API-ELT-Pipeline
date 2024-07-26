@@ -1,0 +1,42 @@
+[2024-07-24T01:41:54.717+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-24T01:41:54.738+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_script_dag.run_dbt manual__2024-07-24T01:41:51.420477+00:00 [queued]>
+[2024-07-24T01:41:54.745+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_script_dag.run_dbt manual__2024-07-24T01:41:51.420477+00:00 [queued]>
+[2024-07-24T01:41:54.746+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-24T01:41:54.758+0000] {taskinstance.py:2330} INFO - Executing <Task(DockerOperator): run_dbt> on 2024-07-24 01:41:51.420477+00:00
+[2024-07-24T01:41:54.765+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=63) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-24T01:41:54.767+0000] {standard_task_runner.py:64} INFO - Started process 65 to run task
+[2024-07-24T01:41:54.765+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_script_dag', 'run_dbt', 'manual__2024-07-24T01:41:51.420477+00:00', '--job-id', '93', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpqss36amp']
+[2024-07-24T01:41:54.767+0000] {standard_task_runner.py:91} INFO - Job 93: Subtask run_dbt
+[2024-07-24T01:41:54.807+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_script_dag.run_dbt manual__2024-07-24T01:41:51.420477+00:00 [running]> on host 95376c4fb2d6
+[2024-07-24T01:41:54.881+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_script_dag' AIRFLOW_CTX_TASK_ID='run_dbt' AIRFLOW_CTX_EXECUTION_DATE='2024-07-24T01:41:51.420477+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-24T01:41:51.420477+00:00'
+[2024-07-24T01:41:54.883+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-24T01:41:54.905+0000] {docker.py:367} INFO - Starting docker container from image ghcr.io/dbt-labs/dbt-postgres:1.8.2
+[2024-07-24T01:41:54.913+0000] {docker.py:375} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-07-24T01:41:57.079+0000] {docker.py:438} INFO - [0m01:41:57  Running with dbt=1.8.3
+[2024-07-24T01:41:57.283+0000] {docker.py:438} INFO - [0m01:41:57  Registered adapter: postgres=1.8.2
+[2024-07-24T01:41:57.382+0000] {docker.py:438} INFO - [0m01:41:57  Unable to do partial parsing because config vars, config profile, or config target have changed
+[2024-07-24T01:41:58.614+0000] {docker.py:438} INFO - [0m01:41:58  Found 4 models, 3 data tests, 415 macros
+[2024-07-24T01:41:58.618+0000] {docker.py:438} INFO - [0m01:41:58
+[2024-07-24T01:41:58.813+0000] {docker.py:438} INFO - [0m01:41:58  Concurrency: 1 threads (target='dev')
+[2024-07-24T01:41:58.814+0000] {docker.py:438} INFO - [0m01:41:58
+[2024-07-24T01:41:58.824+0000] {docker.py:438} INFO - [0m01:41:58  1 of 4 START sql view model public.source_stop_words ........................... [RUN]
+[2024-07-24T01:41:58.978+0000] {docker.py:438} INFO - [0m01:41:58  1 of 4 OK created sql view model public.source_stop_words ...................... [[32mCREATE VIEW[0m in 0.15s]
+[2024-07-24T01:41:58.982+0000] {docker.py:438} INFO - [0m01:41:58  2 of 4 START sql view model public.source_videos ............................... [RUN]
+[2024-07-24T01:41:59.064+0000] {docker.py:438} INFO - [0m01:41:59  2 of 4 OK created sql view model public.source_videos .......................... [[32mCREATE VIEW[0m in 0.08s]
+[2024-07-24T01:41:59.067+0000] {docker.py:438} INFO - [0m01:41:59  3 of 4 START sql view model public.trending_video_counts_per_channel ........... [RUN]
+[2024-07-24T01:41:59.146+0000] {docker.py:438} INFO - [0m01:41:59  3 of 4 OK created sql view model public.trending_video_counts_per_channel ...... [[32mCREATE VIEW[0m in 0.07s]
+[2024-07-24T01:41:59.150+0000] {docker.py:438} INFO - [0m01:41:59  4 of 4 START sql view model public.word_counts_title ........................... [RUN]
+[2024-07-24T01:41:59.234+0000] {docker.py:438} INFO - [0m01:41:59  4 of 4 OK created sql view model public.word_counts_title ...................... [[32mCREATE VIEW[0m in 0.08s]
+[2024-07-24T01:41:59.261+0000] {docker.py:438} INFO - [0m01:41:59
+[2024-07-24T01:41:59.262+0000] {docker.py:438} INFO - [0m01:41:59  Finished running 4 view models in 0 hours 0 minutes and 0.64 seconds (0.64s).
+[2024-07-24T01:41:59.311+0000] {docker.py:438} INFO - [0m01:41:59
+[2024-07-24T01:41:59.312+0000] {docker.py:438} INFO - [0m01:41:59  [32mCompleted successfully[0m
+[2024-07-24T01:41:59.314+0000] {docker.py:438} INFO - [0m01:41:59
+[2024-07-24T01:41:59.315+0000] {docker.py:438} INFO - [0m01:41:59  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[2024-07-24T01:42:00.452+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-24T01:42:00.473+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=elt_script_dag, task_id=run_dbt, run_id=manual__2024-07-24T01:41:51.420477+00:00, execution_date=20240724T014151, start_date=20240724T014154, end_date=20240724T014200
+[2024-07-24T01:42:00.516+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-07-24T01:42:00.530+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-24T01:42:00.533+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

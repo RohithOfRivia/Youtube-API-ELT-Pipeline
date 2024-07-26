@@ -1,0 +1,80 @@
+[0m22:35:48.268744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91F1DB210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91F222990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91EE57790>]}
+
+
+============================== 22:35:48.268744 | 654fe8e0-23a9-47da-85e8-7d0fa1c2ffd1 ==============================
+[0m22:35:48.268744 [info ] [MainThread]: Running with dbt=1.8.4
+[0m22:35:48.268744 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\rohit\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m22:37:15.160487 [debug] [MainThread]: Starter project path: R:\Projects\Youtube DE\youtubeAPI\Lib\site-packages\dbt\include\starter_project
+[0m22:37:15.215665 [info ] [MainThread]: 
+Your new dbt project "youtube_api" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:37:15.217987 [info ] [MainThread]: Setting up your profile.
+[0m22:38:01.530558 [info ] [MainThread]: Profile youtube_api written to C:\Users\rohit\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m22:38:01.530558 [debug] [MainThread]: Command `dbt init` succeeded at 22:38:01.530558 after 133.30 seconds
+[0m22:38:01.530558 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91EF2CF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E918F90910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E918CFB450>]}
+[0m22:38:01.530558 [debug] [MainThread]: Flushing usage events
+[0m23:57:32.401416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B13595B910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B1333B0050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B13595B9D0>]}
+
+
+============================== 23:57:32.401416 | f198ba83-337a-41cd-9011-c5779afd4693 ==============================
+[0m23:57:32.401416 [info ] [MainThread]: Running with dbt=1.8.4
+[0m23:57:32.401416 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\rohit\\.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt clean', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:57:32.401416 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path R:\Projects\Youtube DE\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:57:32.401416 [debug] [MainThread]: Command `dbt clean` failed at 23:57:32.401416 after 0.05 seconds
+[0m23:57:32.401416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B135965790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B12F4AA790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B13595B4D0>]}
+[0m23:57:32.401416 [debug] [MainThread]: Flushing usage events
+[0m00:00:36.150993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D6830AF10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D69161910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D695BBF10>]}
+
+
+============================== 00:00:36.150993 | bde66932-1d61-4864-a7a1-31304514842f ==============================
+[0m00:00:36.150993 [info ] [MainThread]: Running with dbt=1.8.4
+[0m00:00:36.150993 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\rohit\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m00:00:36.150993 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path R:\Projects\Youtube DE\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:00:36.156521 [debug] [MainThread]: Command `dbt run` failed at 00:00:36.150993 after 0.04 seconds
+[0m00:00:36.156521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D69575650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D6306B410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D69566D90>]}
+[0m00:00:36.156521 [debug] [MainThread]: Flushing usage events
+[0m00:00:46.707754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C1C601F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C1C603250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C1C602990>]}
+
+
+============================== 00:00:46.713241 | 5e3565cc-aa29-4828-b3b0-b957d0f9c1fa ==============================
+[0m00:00:46.713241 [info ] [MainThread]: Running with dbt=1.8.4
+[0m00:00:46.713241 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\rohit\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:01:00.746053 [info ] [MainThread]: A project called youtube_elt_dbt already exists here.
+[0m00:01:00.748396 [debug] [MainThread]: Command `dbt init` succeeded at 00:01:00.748396 after 14.07 seconds
+[0m00:01:00.748396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C1C5C53D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C16360910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024C160CB450>]}
+[0m00:01:00.748396 [debug] [MainThread]: Flushing usage events
+[0m00:01:43.086006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022271502E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222714BB5D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222714B87D0>]}
+
+
+============================== 00:01:43.088840 | 8f4d9dab-1e4e-4866-851b-5dbaef3da035 ==============================
+[0m00:01:43.088840 [info ] [MainThread]: Running with dbt=1.8.4
+[0m00:01:43.088840 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\rohit\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m00:01:43.090169 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path R:\Projects\Youtube DE\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:01:43.091190 [debug] [MainThread]: Command `dbt run` failed at 00:01:43.091190 after 0.05 seconds
+[0m00:01:43.091190 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222714C5590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022271502150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002226AFBA790>]}
+[0m00:01:43.091190 [debug] [MainThread]: Flushing usage events
