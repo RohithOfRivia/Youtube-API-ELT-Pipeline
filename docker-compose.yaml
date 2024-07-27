@@ -11,13 +11,13 @@ x-airflow-common:
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
-    AIRFLOW__CORE__FERNET_KEY: ''
+    AIRFLOW__CORE__FERNET_KEY: 'Paste_Fernet_Key'
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'true'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
     API_URL_VIDEOS: "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=CA&maxResults=50&key="
     API_URL_CHANNELS: "https://youtube.googleapis.com/youtube/v3/channels?part=topicDetails&part=brandingSettings&part=contentDetails&part=contentOwnerDetails&part=id&part=localizations&part=snippet&part=statistics&part=status&part=topicDetails&id=UCWJ2lWNubArHWmf3FIHbfcQ&id=UCurvRE5fGcdUgCYWgh-BDsg&id=UCx-KWLTKlB83hDI6UKECtJQ&id=UCB_qr75-ydFVKSF9Dmo6izg&id=UCL9C44BZd_8hRa9OPMjIpMg&maxResults=50&key="
-    API_KEY: "AIzaSyDnBdkuTNySrndtHlz5gq-I_nGniTvbQ1Y"
+    API_KEY: "-- Your API Key --"
     POSTGRES_PASS: "secret"
     POSTGRES_DB: "airflow"
     POSTGRES_USERNAME: "elt_user"
@@ -44,7 +44,7 @@ x-airflow-common:
     - ./crawlers.py:/opt/airflow/scripts/crawlers.py
     - ./sql_operations.py:/opt/airflow/scripts/sql_operations.py
     - ./youtube_elt_dbt:/opt/airflow/dbt/
-    - C:/Users/rohit/.dbt:/root/.dbt
+    - Paste_path_to_DBT_profiles_directory/root/.dbt
     - /var/run/docker.sock:/var/run/docker.sock
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
@@ -298,52 +298,6 @@ services:
       - ./postgres_data/init.sql:/docker-entrypoint-initdb.d/init.sql
       - ./postgres_data/stopwords.txt:/stopwords.txt
       - pgdata:/var/lib/postgresql/data
-  
-  # elt_script:
-  #   build:
-  #     context: ./
-  #     dockerfile: dockerfile
-  #   command: ["python", "elt_script.py"] 
-  #   volumes:
-  #     - ./crawlers.py:/crawlers.py
-  #     - ./sql_operations.py:/sql_operations.py
-  #     - ./elt_script.py:/elt_script.py
-  #   environment: 
-  #     API_URL_VIDEOS: "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=CA&maxResults=50&key="
-  #     API_URL_CHANNELS: "https://youtube.googleapis.com/youtube/v3/channels?part=topicDetails&part=brandingSettings&part=contentDetails&part=contentOwnerDetails&part=id&part=localizations&part=snippet&part=statistics&part=status&part=topicDetails&key="
-  #     API_KEY: "AIzaSyDnBdkuTNySrndtHlz5gq-I_nGniTvbQ1Y"
-  #     POSTGRES_PASSWORD: "secret"
-  #     POSTGRES_DB: "airflow"
-  #     POSTGRES_USERNAME: "elt_user"
-  #     POSTGRES_HOST: "postgres1"
-  #     POSTGRES_URI: "postgresql://elt_user:secret@postgres1/airflow"
-  #   networks: 
-  #     - elt_network
-  #   depends_on:
-  #     postgres1:
-  #       condition: service_healthy
-
-  # dbt:
-  #   image: ghcr.io/dbt-labs/dbt-postgres:1.8.2
-  #   command:
-  #     [
-  #       "run",
-  #       "--profiles-dir",
-  #       "/root",
-  #       "--project-dir",
-  #       "/dbt"
-  #     ]
-  #   networks:
-  #     - elt_network
-  #   volumes:
-  #     - ./youtube_elt_dbt:/dbt
-  #     - C:/Users/rohit/.dbt:/root
-  #   environment:
-  #     DBT_PROFILE: youtube_elt_dbt
-  #     DBT_TARGET: dev
-    # depends_on:
-      # elt_script:
-      #   condition: service_completed_successfully
 
 volumes:
   pgdata:
