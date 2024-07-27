@@ -49,10 +49,10 @@ run_dbt = DockerOperator(
     docker_url='unix://var/run/docker.sock',
     network_mode='bridge',
     mounts=[
-        Mount(source='--- Replace this string with path to dbt folder in project directory ---',
+        Mount(source='R:/Projects/Youtube DE/youtube_elt_dbt',
               target='/dbt', type='bind'),
         
-        Mount(source='--- Replace this string with path to .dbt file in dbt profiles ---',
+        Mount(source='C:/Users/rohit/.dbt',
               target='/root', type='bind')
     ],
     dag=elt_script_dag

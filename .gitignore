@@ -4,3 +4,5 @@ README.Docker.md
 dump
 youtubeAPI/
 data.json
+airflow/dags/dag.py
+docker-compose.yml
