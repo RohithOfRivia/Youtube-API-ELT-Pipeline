@@ -75,7 +75,7 @@ Creates some views that provide meaningful insights from the videos and channels
 ### Prerequisites
 Ensure you have the following installed on your system:
 - [Python 3.8+](https://www.python.org/downloads/)
-- [Airflow](https://docs.dagster.io/getting-started/install)
+- [Airflow](https://airflow.apache.org/)
 - [DBT](https://docs.getdbt.com/docs/installation)
 - [YouTube Data API](https://developers.google.com/youtube/v3) (for fetching YouTube data)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
@@ -105,6 +105,6 @@ Ensure you have the following installed on your system:
 	psql elt_user -d airflow
 ## Acknowledgments
 - [Python](https://www.python.org/)
-- [Dagster](https://dagster.io/)
+- [Airflow]([https://dagster.io/](https://airflow.apache.org/))
 - [DBT](https://getdbt.com/)
 - [YouTube Data API](https://developers.google.com/youtube/v3)
