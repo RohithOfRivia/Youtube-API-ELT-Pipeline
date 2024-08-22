@@ -87,8 +87,8 @@ Ensure you have the following installed on your system:
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/RohithOfRivia/dagster-dbt-youtube.git
-   cd dagster-dbt-youtube
+   git clone [https://github.com/RohithOfRivia/dagster-dbt-youtube.git](https://github.com/RohithOfRivia/Youtube-API-ELT-Pipeline.git)
+   cd Youtube-API-ELT-Pipeline
 2. **Use docker compose to build and run the containers:**
 	  ```bash
 	   docker compose up --build
