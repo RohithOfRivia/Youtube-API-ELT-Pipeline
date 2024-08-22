@@ -31,7 +31,8 @@ Creates some views that provide meaningful insights from the videos and channels
 5. view_ranks: All channels ranked by views, also includes statistics like subscribers, total video count, etc.
 
 ### Project Workflow Diagram
-<br>![Dagster project diagram](https://github.com/user-attachments/assets/0f887ad2-bf0b-408c-801f-d7cf24b10ca0)<br>
+<br> ![Dagster project diagram drawio](https://github.com/user-attachments/assets/47545153-c00c-4e6c-b6b0-78ecfd0d19da)
+  <br>
 
 
 ###  ER Diagram
