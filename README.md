@@ -83,7 +83,7 @@ Ensure you have the following installed on your system:
 ### Configuration
 - **.env file**: Modify the .env file to add your API key within the double quotes.
 - **DBT Configuration**: Modify `dbt_project.yml` and `profiles.yml` according to your setup. Can run without any modifications.
-- **Asset execution schedule**: The assets are programmed to run hourly, the schedule object in \_\_init\__.py can be modified to make changes to the schedule.
+
 ### Installation
 1. **Clone the repository:**
    ```bash
@@ -92,7 +92,7 @@ Ensure you have the following installed on your system:
 2. **Use docker compose to build and run the containers:**
 	  ```bash
 	   docker compose up --build
-3. **Access webserver for monitoring the assets**::
+3. **Access webserver for monitoring airflow runs**::
 	- Open your browser and go to this address: *localhost:8080*
 
 	
