@@ -82,8 +82,6 @@ Ensure you have the following installed on your system:
 
 ### Configuration
 - **.env file**: Modify the .env file to add your API key within the double quotes.
-- **Dagster Configuration**: Update `dagster.yaml` with your specific pipeline settings, if necessary. In most cases, you can run it as is.
-  
 - **DBT Configuration**: Modify `dbt_project.yml` and `profiles.yml` according to your setup. Can run without any modifications.
 - **Asset execution schedule**: The assets are programmed to run hourly, the schedule object in \_\_init\__.py can be modified to make changes to the schedule.
 ### Installation
