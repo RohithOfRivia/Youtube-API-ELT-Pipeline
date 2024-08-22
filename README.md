@@ -103,6 +103,6 @@ Ensure you have the following installed on your system:
 	psql elt_user -d airflow
 ## Acknowledgments
 - [Python](https://www.python.org/)
-- [Airflow]([https://dagster.io/](https://airflow.apache.org/))
+- [Airflow](https://airflow.apache.org/))
 - [DBT](https://getdbt.com/)
 - [YouTube Data API](https://developers.google.com/youtube/v3)
